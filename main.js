@@ -4,6 +4,7 @@ import Login from './src/pages/Login';
 import Register from './src/pages/Register';
 import NotFound from './src/pages/404';
 import AddBlog from './src/pages/AddBlog';
+import Details from './src/pages/Details';
 
 const page = window.location.pathname;
 const userData = localStorage.getItem('userData');
@@ -23,6 +24,10 @@ switch(page){
 
   case "/addBlog":
     userData ? AddBlog() : window.location.href = "/login"
+    break
+
+  case "/details":
+    Details()
     break
 
   default:
